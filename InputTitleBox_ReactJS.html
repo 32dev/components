@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React Box Title</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poor+Story&display=swap');
+
+        body {
+            font-family: 'Poor Story', system-ui, Arial, sans-serif;
+            color: #333;
+            margin: 20px;
+            padding: 20px;
+        }
+
+        #root {
+            border: 5px solid #007BFF;
+            width: 200px;
+            height: 200px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            color: #007BFF;
+            margin: 10px 0 5px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+
+        hr {
+            border: 0;
+            border-bottom: 1px solid #007BFF;
+        }
+
+        input {
+            border: 0;
+            border-bottom: 1px solid #007BFF;
+            margin-bottom: 10px;
+            width: 30%;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app"></div>
+
+    <!-- React & Babel CDN -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- React Component -->
+    <script type="text/babel">
+        const { useState, useEffect } = React;
+
+        function BoxComponent() {
+            const [title, setTitle] = useState("Box title");
+            const [description, setDescription] = useState("This is a placeholder for the wave component.");
+
+            return (
+                <div>
+                    <div id="root">
+                        <h3>[ {title} ]</h3>
+                        <hr />
+                        <p>{description}</p>
+                    </div>
+
+                    <div id="input-container">
+                        <h3>Input Title</h3>
+                        <input
+                            type="text"
+                            value={title}
+                            onChange={(e) => setTitle(e.target.value)}
+                            placeholder="Enter title here"
+                        />
+
+                        <h3>Description</h3>
+                        <input
+                            type="text"
+                            value={description}
+                            onChange={(e) => setDescription(e.target.value)}
+                            placeholder="Enter description here"
+                        />
+                    </div>
+                </div>
+            );
+        }
+
+        const root = ReactDOM.createRoot(document.getElementById("app"));
+        root.render(<BoxComponent />);
+    </script>
+</body>
+
+</html>

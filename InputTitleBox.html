@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>box title</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poor+Story&display=swap');
+
+    body {
+      font-family: 'Poor Story', system-ui, Arial, sans-serif;
+      color: #333;
+      margin: 20px;
+      padding: 20px;
+    }
+
+    #root {
+      border: 5px solid #007BFF;
+      width: 200px;
+      height: 200px;
+      padding: 20px;
+    }
+
+    h3 {
+      color: #007BFF;
+    }
+
+    p {
+      font-size: 16px;
+    }
+
+    hr {
+      border: 0;
+      border-bottom: 1px solid #007BFF;
+    }
+
+    input {
+      border: 0;
+      border-bottom: 1px solid #007BFF;
+      margin-bottom: 10px;
+      width:30%;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="root">
+    <h3 id="title">[ Box title ]</h3>
+    <hr />
+    <p id="description">This is a placeholder for the wave component.</p>
+  </div>
+
+  <div id="input-container">
+    <h3>Input Title</h3>
+    <input type="text" id="title-input" placeholder="Enter title here" />
+
+    <h3>Description</h3>
+    <input type="text" id="description-input" placeholder="Enter description here" />
+  </div>
+
+  <script>
+    const title = document.getElementById("title");
+    const description = document.getElementById("description");
+    const titleInput = document.getElementById("title-input");
+    const descriptionInput = document.getElementById("description-input");
+
+    window.onload = () => {
+      titleInput.value = "Box title";
+      descriptionInput.value = "This is a placeholder for the wave component.";
+    };
+
+    titleInput.addEventListener("input", () => {
+      title.textContent = `[ ${titleInput.value} ]`;
+    });
+
+    descriptionInput.addEventListener("input", () => {
+      description.textContent = descriptionInput.value;
+    });
+  </script>
+</body>
+
+</html>
