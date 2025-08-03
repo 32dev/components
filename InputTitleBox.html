@@ -8,8 +8,11 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Poor+Story&display=swap');
 
-    body {
+    * {
       font-family: 'Poor Story', system-ui, Arial, sans-serif;
+    }
+
+    body {
       color: #333;
       margin: 20px;
       padding: 20px;
@@ -26,7 +29,7 @@
       color: #007BFF;
     }
 
-    p {
+    pre {
       font-size: 16px;
     }
 
@@ -49,7 +52,7 @@
   <div id="root">
     <h3 id="title">[ Box title ]</h3>
     <hr />
-    <p id="description">This is a placeholder for the wave component.</p>
+    <pre id="description">This is a placeholder for the wave component.</pre>
   </div>
 
   <div id="input-container">
@@ -57,7 +60,7 @@
     <input type="text" id="title-input" placeholder="Enter title here" />
 
     <h3>Description</h3>
-    <input type="text" id="description-input" placeholder="Enter description here" />
+    <textarea id="description-input" placeholder="Enter description here" cols="50"></textarea>
   </div>
 
   <script>
