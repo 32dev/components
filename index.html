@@ -12,35 +12,47 @@
             padding: 0;
             width: 100%;
             height: 100%;
+            position:relative;
+        }
+        
+        #columns {
+            position:absolute;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: left;
         }
 
         object {
-            width: 400px;
-            height: 300px;
-            float: left;
-            margin: 10px;
-            border-right: 1px solid #007BFF;
-            border-bottom: 1px solid #007BFF;
+          width: 400px;
+          height : 300px;
+          border:1px solid rgba(0,0,0,0.2);
+          padding:10px;
+          box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+          margin: 0;
         }
     </style>
 </head>
 
 <body>
-    <object data="BlinkTitle.html">
-    </object>
-    <object data="BoxTitle.html">
-    </object>
-    <object data="BlueColorTitle.html">
-    </object>
-    <object data="RadiusTitle.html">
-    </object>
-    <object data="TitleStyles.html"></object>
-    <object data="InputTitleBox.html" style="height:500px;">
-    </object>
-    <object data="InputContainer.html"></object>
-    <object data="BlackTitle1.html"></object>
-    <object data="SkyBlueTitle1.html"></object>
-    <object data="./../html/에어컨.html"></object>
+    <div id="columns">
+        <object data="BlinkTitle.html">
+        </object>
+        <object data="BoxTitle.html">
+        </object>
+        <object data="BlueColorTitle.html">
+        </object>
+        <object data="RadiusTitle.html">
+        </object>
+        <object data="TitleStyles.html"></object>
+        <object data="InputTitleBox.html" style="height:500px;">
+        </object>
+        <object data="InputContainer.html"></object>
+        <object data="BlackTitle1.html"></object>
+        <object data="SkyBlueTitle1.html"></object>
+        <object data="./../html/에어컨.html"></object>
+        <object data="./../html/테이블만들기1.html"></object>
+    </div>
 </body>
 
 </html>
