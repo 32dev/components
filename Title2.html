@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>32dev.github.io</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&display=swap');
+
+        body {
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: "Bitcount Prop Single", system-ui;
+        }
+
+        h1 {
+            font-weight:300;
+            padding: 20px 40px;
+            color: white;
+            border: 1px dotted white;
+            text-transform: uppercase;
+            font-size:large;
+            animation: colorChange 3s infinite alternate, borderChange 3s infinite alternate;
+        }
+
+        /* 글자 색상 애니메이션 */
+        @keyframes colorChange {
+            0% {
+                color: red;
+            }
+
+            25% {
+                color: orange;
+            }
+
+            50% {
+                color: yellow;
+            }
+
+            75% {
+                color: lime;
+            }
+
+            100% {
+                color: cyan;
+            }
+        }
+
+        /* 테두리 색상 애니메이션 */
+        @keyframes borderChange {
+            0% {
+                border-color: red;
+            }
+
+            25% {
+                border-color: orange;
+            }
+
+            50% {
+                border-color: yellow;
+            }
+
+            75% {
+                border-color: lime;
+            }
+
+            100% {
+                border-color: cyan;
+            }
+        }
+        
+    </style>
+</head>
+
+<body>
+    <h1>dev-32 / blog</h1>
+    <h1 class="h1_2">youtube</h1>
+</body>
+
+</html>
